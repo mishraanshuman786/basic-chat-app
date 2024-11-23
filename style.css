@@ -1,0 +1,179 @@
+/* Reset CSS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+  background-image: url("https://static.vecteezy.com/system/resources/previews/005/182/612/original/green-abstract-geometric-shape-background-free-vector.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+/* Main Container */
+.chat-container {
+  width: 100%;
+  max-width: 600px;
+  height: 100vh;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  background-image: url("https://images.pexels.com/photos/531880/pexels-photo-531880.jpeg?cs=srgb&dl=background-blur-clean-531880.jpg&fm=jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  border: 1px solid #ddd;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+/* Header */
+.chat-header {
+  background-color: #4caf50;
+  color: #fff;
+  padding: 15px;
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+/* Messages Section */
+.chat-messages {
+  flex: 1;
+  padding: 15px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Message Styling */
+.message {
+  max-width: 70%;
+  padding: 10px 15px;
+  border-radius: 15px;
+  font-size: 0.9rem;
+  line-height: 1.4;
+  word-wrap: break-word;
+}
+
+/* Sender's messages (align left) */
+.message.sent {
+  background-color: #d1f7c4;
+  align-self: flex-start;
+  text-align: left;
+  margin-left: 0;
+}
+
+/* Receiver's messages (align right) */
+.message.received {
+  background-color: #f1f1f1;
+  align-self: flex-end;
+  text-align: right;
+  margin-right: 0;
+}
+
+/* Timestamp */
+.message .time {
+  display: block;
+  font-size: 0.75rem;
+  color: #555;
+  margin-top: 5px;
+}
+
+/* Input Section */
+#chat-input {
+  display: flex;
+  padding: 10px;
+  border-top: 1px solid #ddd;
+  background-color: #fff;
+}
+
+#chat-input input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  outline: none;
+  font-size: 1rem;
+}
+
+#chat-input button {
+  padding: 10px 15px;
+  margin-left: 10px;
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+#chat-input button:hover {
+  background-color: #45a049;
+}
+
+/* Mobile Responsiveness */
+@media screen and (max-width: 600px) {
+  /* Header */
+  .chat-header {
+    font-size: 1.2rem;
+    padding: 10px;
+  }
+
+  /* Container Background for Mobile */
+  .chat-container {
+    background-image: url("https://i.pinimg.com/736x/6e/95/f5/6e95f570a15c71e5f184106a63d847df.jpg");
+  }
+
+  /* Adjust Message Font Size */
+  .message {
+    font-size: 0.8rem;
+    padding: 8px 12px;
+  }
+
+  /* Input Section */
+  #chat-input input {
+    font-size: 0.9rem;
+  }
+
+  #chat-input button {
+    padding: 8px 12px;
+    font-size: 0.9rem;
+  }
+}
+
+/* Scrollbar Styles */
+/* Scrollbar hidden by default */
+.chat-messages::-webkit-scrollbar {
+  width: 8px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+/* Scrollbar track */
+.chat-messages::-webkit-scrollbar-track {
+  background-color: #ddd;
+  border-radius: 10px;
+}
+
+/* Scrollbar thumb */
+.chat-messages::-webkit-scrollbar-thumb {
+  background-color: #4caf50;
+  border-radius: 10px;
+}
+
+/* Show scrollbar on hover */
+.chat-messages:hover::-webkit-scrollbar {
+  opacity: 1;
+}
+
+.chat-messages {
+  scrollbar-color: transparent transparent; /* Hidden */
+}
+
+.chat-messages:hover {
+  scrollbar-color: #4caf50 #ddd; /* Visible on hover */
+  scrollbar-width: thin;
+}
